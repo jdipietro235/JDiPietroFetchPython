@@ -7,7 +7,7 @@ https://www.python.org/downloads/
 
 2. Download the files in this repository.
 
-2. Launch IDLE (Python's integrated Development Environment).
+2. Launch IDLE (Python's Integrated Development Environment).
 
 3. Open server.py.
 
