@@ -25,6 +25,7 @@ class web_server(BaseHTTPRequestHandler):
             # if the index page can't be found, just send them an error
             file_to_open = "File not found"
             self.send_response(404)
+        #self.send_header('Content-Type', 'text/html')
         self.end_headers()
         # Send over either the index page or the error message
         self.wfile.write(bytes(fileToOpen, 'utf-8'))
@@ -42,13 +43,11 @@ class web_server(BaseHTTPRequestHandler):
         addressList = formString.split(',')
         # Turn the int returned by countAddresses into a string
         addrCount = str(countAddresses(addressList))
-        fileToOpen = 'You entered ' + addrCount + ' distinct email addresses'
+        stringToDisplay = 'You entered ' + addrCount + ' distinct email addresses'
         # Send the response to the user
-        self.wfile.write(bytes(fileToOpen, 'utf-8'))
+        self.wfile.write(bytes(stringToDisplay, 'utf-8'))
 
 def countAddresses(addressList):
-    # Specifically: Gmail will ignore the placement of "." in the username. 
-    # And it will ignore any portion of the username after a "+".
     # List for saving each distinct email address
     outputList = []
     print(addressList)
@@ -71,4 +70,5 @@ def countAddresses(addressList):
 
 # Start up the server and keep running it until it stops
 httpd = HTTPServer(('localhost', 8080), web_server)
+print('JDiPietro Fetch Python Server Starting')
 httpd.serve_forever()
