@@ -1,0 +1,26 @@
+<html>
+    <head>
+		<title>Fetch Test</title>
+		<link rel="stylesheet" type="text/css" href="base.css">
+    </head>
+    <body>
+		<br><br>
+        <h1>Justin's Address Counter</h1>
+		<h3>Please add as many email addresses as you would like, separated by commas or spaces. Below are some examples.</h3>
+		<h3>test.email@gmail.com, test.email+spam@gmail.com testemail@gmail.com, test.email@gmail.com, test.email@fetchrewards.com</h3>
+		<br>
+		<form action="/counter" method="post">
+			<label for="addresses">Email Addresses:</label>
+			<input type="text" id="addresses" name="addresses"><br><br>
+			<input type="submit" value="Submit">
+		</form> 
+		<br>
+		<p>Accept a list of email addresses, then return an integer indicating the number of unique email addresses.</p>
+		<p>Where unique email addresses means they will be delivered to the same account using Gmail account matching. 
+			Specifically: Gmail will ignore the placement of "." in the username. 
+			And it will ignore any portion of the username after a "+".</p> 
+		<p>Justin DiPietro<br>jdipietro235@gmail.com<br>2020-9-25</p>
+			<br><br><br>
+
+    </body>
+</html>
