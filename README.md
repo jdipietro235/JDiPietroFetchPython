@@ -13,6 +13,6 @@ https://www.python.org/downloads/
 
 4. Press f5.
 
-5. Navigate to localhost:8080 in your web browser of choice.
+5. Navigate to localhost:8080 in FireFox or Edge.
 
 6. Add any number of email addresses to the web page and press "Submit"
